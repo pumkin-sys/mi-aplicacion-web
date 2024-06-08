@@ -1,10 +1,9 @@
 // app.js
 const express = require('express');
+const routes = require('./routes'); 
 const app = express();
 
-app.get('/', (req, res) => {
-  res.send('¡Hola, mundo!');
-});
+app.use('/', routes);
 
 app.listen(3000, () => {
   console.log('Aplicación escuchando en el puerto 3000');
